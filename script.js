@@ -37,7 +37,7 @@ function displayData(data){
 
         // create the html content to display the data in order
         htmlContent += `
-        <div class = "drink"
+        <div class = "drink">
         <img src = "${imageUrl}" alt = "${title}">
         <p><strong></strong> ${title}</p>
         <p><strong>Description: </strong> ${description} </p>
