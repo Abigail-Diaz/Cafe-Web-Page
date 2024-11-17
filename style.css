@@ -1,11 +1,24 @@
-.drink {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+body {
+    font-family: serif;
+    background-color: #d1c3a4;/* #4d582e*/
+    color: #071302;/* Text color */
+    display: flex;
+    padding: 75px;/* Padding from border */
 }
+
+.drink {
+    margin: 50px 15px 0px;
+}
+
+/* Individual Image styling */
 .drink img {
-    max-width: 50%;
-    height: auto;
+    width: 100%;
+    border-radius: 50px;
+}
+
+#data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    max-width: auto;/* Adjust images according to window size */
 }
