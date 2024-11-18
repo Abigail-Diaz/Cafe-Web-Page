@@ -22,3 +22,21 @@ body {
     width: 100%;
     max-width: auto;/* Adjust images according to window size */
 }
+#drinks-link {
+    text-decoration: none; /* Remove underline */
+    color: #4b3f72; /* Purple for links */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+#menu-links {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 10px;;
+    padding: 10px
+    px;;
+    }
+
