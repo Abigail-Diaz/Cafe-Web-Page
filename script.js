@@ -1,10 +1,8 @@
 
-async function getData(){
-    
-    const hot_drink_url = 'https://api.sampleapis.com/coffee/hot';
+async function getData(url){
 
     try {
-        const response = await fetch(hot_drink_url);
+        const response = await fetch(url);
 
         if (!response.ok){
             throw new Error(`Response is not okay: Status of response is ${response.status}`);
@@ -50,6 +48,35 @@ function displayData(data){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    getData();
-});
+    const hot_drink_url = 'https://api.sampleapis.com/coffee/hot';
+    const cold_drink_url = 'https://api.sampleapis.com/coffee/iced';
+    // Select the link element
+    const hot_drink_link = document.querySelector('#hot-drinks-link');
+    const cold_drink_link = document.querySelector('#cold-drinks-link');
+    console.log('hot_drink_link:', hot_drink_link);
+    console.log('cold_drink_link:', cold_drink_link);
+    
+    //getData(hot_drink_url);
+    // Add an event listener for the 'click' event
+    if (hot_drink_link) {
+        hot_drink_link.addEventListener('click', (event) => {
+            
+            getData(hot_drink_url);
+            event.preventDefault();
+        });
+    }
+     else {
+        console.error('hot_drink_link not found!');
+    }
 
+    if (cold_drink_link){
+        cold_drink_link.addEventListener('click', (event) => {
+           
+            getData(cold_drink_url);
+            event.preventDefault();
+        });
+    } else {
+        console.error('cold_drink_link not found!');
+    }
+
+});
