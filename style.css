@@ -2,7 +2,7 @@ body {
     font-family: serif;
     background-color: #d1c3a4;/* #4d582e*/
     color: #071302;/* Text color */
-    display: flex;
+    display: left;
     padding: 75px;/* Padding from border */
 }
 
@@ -24,16 +24,28 @@ body {
 }
 #hot-drinks-link {
     text-decoration: none; /* Remove underline */
-    color: #4b3f72; /* Purple for links */
+    color: #125526; /* Purple for links */
     font-weight: 600;
     transition: color 0.3s ease;
 }
 #cold-drinks-link {
     text-decoration: none; /* Remove underline */
-    color: #4b3f72; /* Purple for links */
+    color: #125526; /* Purple for links */
     font-weight: 600;
     transition: color 0.3s ease;
 }
+
+#page-title {
+    content: ''; /* Create a decorative line */
+    display: block; /* Makes it behave like a block element */
+    width: 100%; /* Line width */
+    height: 3px; /* Line thickness */
+    background-color: #4b3f72; /* Matches the title color */
+    margin-top: 5px; /* Space between text and line */
+    margin-left: 0; /* Align the line to the left */
+
+}
+
 #menu-links {
     list-style: none; /* Remove bullets */
     padding: 0;

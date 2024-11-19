@@ -25,7 +25,7 @@ function displayData(data){
     let htmlContent = '';
     
     data.forEach(item => {
-        //const drink = document.createElement('div');
+
         
         // organize the data into corresponding variables
         const title = item.title;
@@ -53,16 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select the link element
     const hot_drink_link = document.querySelector('#hot-drinks-link');
     const cold_drink_link = document.querySelector('#cold-drinks-link');
+    const pageTitle = document.querySelector('#page-title'); // Select the h1 element
     console.log('hot_drink_link:', hot_drink_link);
     console.log('cold_drink_link:', cold_drink_link);
     
-    //getData(hot_drink_url);
+    // display the hot drinks first
+    getData(hot_drink_url);
+    
     // Add an event listener for the 'click' event
     if (hot_drink_link) {
         hot_drink_link.addEventListener('click', (event) => {
-            
-            getData(hot_drink_url);
             event.preventDefault();
+            pageTitle.textContent = 'Hot Drinks'; // Update the h1 title
+            getData(hot_drink_url);
         });
     }
      else {
@@ -71,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cold_drink_link){
         cold_drink_link.addEventListener('click', (event) => {
-           
-            getData(cold_drink_url);
             event.preventDefault();
+            pageTitle.textContent = 'Cold Drinks'; // Update the h1 title
+            getData(cold_drink_url);
         });
     } else {
         console.error('cold_drink_link not found!');
