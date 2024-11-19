@@ -34,7 +34,7 @@ function displayData(data){
         const imageUrl = item.image;
 
         // create the html content to display the data in order
-        if (title !=''){
+        if (title !==''){
             htmlContent += `
             <div class="drink">
                 <img src="${imageUrl}" alt="${title}">
@@ -52,6 +52,7 @@ function displayData(data){
 document.addEventListener('DOMContentLoaded', () => {
     const hot_drink_url = 'https://api.sampleapis.com/coffee/hot';
     const cold_drink_url = 'https://api.sampleapis.com/coffee/iced';
+    
     // Select the link element
     const hot_drink_link = document.querySelector('#hot-drinks-link');
     const cold_drink_link = document.querySelector('#cold-drinks-link');
@@ -83,5 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('cold_drink_link not found!');
     }
-
 });
