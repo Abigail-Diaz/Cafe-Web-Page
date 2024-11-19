@@ -34,15 +34,17 @@ function displayData(data){
         const imageUrl = item.image;
 
         // create the html content to display the data in order
-        htmlContent += `
-        <div class="drink">
-            <img src="${imageUrl}" alt="${title}">
-            <div class="drink-details">
-                <h3>${title}</h3>
-                <p>${description}</p>
-                <p><strong>Ingredients:</strong> ${ingredients.join(', ')}</p>
-            </div>
-        </div>`;
+        if (title !=''){
+            htmlContent += `
+            <div class="drink">
+                <img src="${imageUrl}" alt="${title}">
+                <div class="drink-details">
+                    <h3>${title}</h3>
+                    <p>${description}</p>
+                    <p><strong>Ingredients:</strong> ${ingredients.join(', ')}</p>
+                </div>
+            </div>`;}
+        
     });
     container.innerHTML = htmlContent;
 }
