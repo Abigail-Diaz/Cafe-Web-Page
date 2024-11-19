@@ -45,12 +45,12 @@ function displayData(data){
                     <p><strong>Ingredients:</strong> ${ingredients.join(', ')}</p>
                 </div>
             </div>`;}
-        
     });
     container.innerHTML = htmlContent;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     const hot_drink_url = 'https://api.sampleapis.com/coffee/hot';
     const cold_drink_url = 'https://api.sampleapis.com/coffee/iced';
     
@@ -58,13 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const hot_drink_link = document.querySelector('#hot-drinks-link');
     const cold_drink_link = document.querySelector('#cold-drinks-link');
     const pageTitle = document.querySelector('#page-title'); // Select the h1 element
+    
+    // check if the links work
     console.log('hot_drink_link:', hot_drink_link);
     console.log('cold_drink_link:', cold_drink_link);
     
     // display the hot drinks first
     getData(hot_drink_url);
     
-    // Add an event listener for the 'click' event
+    // Add an event listener for the 'click' event on the menu selection links
     if (hot_drink_link) {
         hot_drink_link.addEventListener('click', (event) => {
             event.preventDefault();
