@@ -37,7 +37,8 @@ function displayData(data){
         if (title !==''){
             htmlContent += `
             <div class="drink">
-                <img src="${imageUrl}" alt="${title}">
+                <img src="${imageUrl}"
+                alt="${title}">
                 <div class="drink-details">
                     <h3>${title}</h3>
                     <p>${description}</p>
